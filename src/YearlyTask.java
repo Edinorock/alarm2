@@ -10,7 +10,7 @@ public class YearlyTask extends Task {
     @Override
     public boolean appearsIn(LocalDate date) {
 
-        return getTaskDateTime().getYear() <= date.getYear() && getTaskDateTime().getDayOfYear() == date.getDayOfYear();
+        return getTaskDateTime().getYear() <= date.getYear() && getTaskDateTime().getDayOfYear() == date.getDayOfYear() || date.isAfter(getTaskDateTime());
     }
 
 }

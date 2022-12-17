@@ -8,7 +8,7 @@ public class SingleTask extends Task {
 
     @Override
     public boolean appearsIn(LocalDate date) {
-        return getTaskDateTime().equals(date.atStartOfDay());
+        return getTaskDateTime().equals(date.atStartOfDay()) || date.isAfter(getTaskDateTime());
 
     }
 }
